@@ -78,12 +78,14 @@ resource "aws_vpc_peering_connection" "useast1-uswest2" {
 
 }
 
+
 # Accept VPC peering request in us-west-2 from us-east-1
 resource "aws_vpc_peering_connection_accepter" "accept_peering" {
   provider                  = aws.region-worker
   vpc_peering_connection_id = aws_vpc_peering_connection.useast1-uswest2.id
   auto_accept               = true
 }
+
 
 # Create route table in us-east-1
 resource "aws_route_table" "internet_route" {
@@ -105,12 +107,14 @@ resource "aws_route_table" "internet_route" {
   }
 }
 
+
 # Overwrite default route table of VPC(Master) with our route table entries
 resource "aws_main_route_table_association" "set-master-default-rt-assoc" {
   provider       = aws.region-master
   vpc_id         = aws_vpc.vpc_master.id
   route_table_id = aws_route_table.internet_route.id
 }
+
 
 # Create route table in us-west-2
 resource "aws_route_table" "internet_route_oregon" {
@@ -131,6 +135,7 @@ resource "aws_route_table" "internet_route_oregon" {
     Name = "Worker-Region-RT"
   }
 }
+
 
 # Overwrite default route table of VPC(Worker) with our route table entries
 resource "aws_main_route_table_association" "set-worker-default-rt-assoc" {
