@@ -1,4 +1,3 @@
-# Application load balancer
 resource "aws_lb" "application-lb" {
   provider           = aws.region-master
   name               = "jenkins-lb"
@@ -11,8 +10,6 @@ resource "aws_lb" "application-lb" {
   }
 }
 
-# Create variable named webserver-port , type number , default 80
-# Change port to variable in jenkins-sg group ingress rule which allows traffic from LB SG.
 resource "aws_lb_target_group" "app-lb-tg" {
   provider    = aws.region-master
   name        = "app-lb-tg"
@@ -33,7 +30,6 @@ resource "aws_lb_target_group" "app-lb-tg" {
   }
 }
 
-# ALB Listener for HTTP
 resource "aws_lb_listener" "jenkins-listener-http" {
   provider          = aws.region-master
   load_balancer_arn = aws_lb.application-lb.arn
@@ -49,7 +45,6 @@ resource "aws_lb_listener" "jenkins-listener-http" {
   }
 }
 
-# ALB Listener for HTTPS
 resource "aws_lb_listener" "jenkins-listener-https" {
   provider          = aws.region-master
   load_balancer_arn = aws_lb.application-lb.arn
@@ -63,7 +58,6 @@ resource "aws_lb_listener" "jenkins-listener-https" {
   }
 }
 
-# ALB target group
 resource "aws_lb_target_group_attachment" "jenkins-master-attach" {
   provider         = aws.region-master
   target_group_arn = aws_lb_target_group.app-lb-tg.arn

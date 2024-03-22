@@ -1,4 +1,3 @@
-# Create SG for LB, only TCP/80,TCP/443 and outbound access
 resource "aws_security_group" "lb-sg" {
   provider    = aws.region-master
   name        = "lb-sg"
@@ -26,8 +25,6 @@ resource "aws_security_group" "lb-sg" {
   }
 }
 
-
-# Create SG for allowing TCP/8080 from * and TCP/22 from your IP in us-east-1
 resource "aws_security_group" "jenkins-sg" {
   provider    = aws.region-master
   name        = "jenkins-sg"
@@ -62,8 +59,6 @@ resource "aws_security_group" "jenkins-sg" {
   }
 }
 
-
-# Create SG for allowing TCP/22 from your IP in us-west-2
 resource "aws_security_group" "jenkins-sg-oregon" {
   provider = aws.region-worker
 

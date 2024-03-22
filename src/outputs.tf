@@ -25,7 +25,6 @@ output "Jenkins-Worker-Public-IPs" {
     instance.id => instance.public_ip
   }
 }
-
 output "url" {
   value = aws_route53_record.jenkins.fqdn
 }

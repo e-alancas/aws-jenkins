@@ -4,8 +4,6 @@ data "aws_route53_zone" "dns" {
   name     = var.dns-name
 }
 
-
-# Create record in hosted zone for ACM Certificate Domain verification
 resource "aws_route53_record" "cert_validation" {
   provider = aws.region-master
   for_each = {
@@ -22,7 +20,6 @@ resource "aws_route53_record" "cert_validation" {
   zone_id = data.aws_route53_zone.dns.zone_id
 }
 
-# Create an Alias record towards ALB from Route53
 resource "aws_route53_record" "jenkins" {
   provider = aws.region-master
   zone_id  = data.aws_route53_zone.dns.zone_id
