@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/e-alancas/selenium-functional-testing">
+  <a href="https://github.com/e-alancas/jenkins-aws-terraform-ansible">
     <img src="resources/img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
