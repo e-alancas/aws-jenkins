@@ -1,3 +1,4 @@
 /src/.terraform
 /src/ssh/*.pub
 /src/ssh/id_rsa
+/src/.terraform.lock.hcl
