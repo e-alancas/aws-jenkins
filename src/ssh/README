@@ -1,0 +1,3 @@
+Put in here your SSH keys for the instances to connect via SSH.
+id_rsa.pub is required.
+These Keys are not included via git.
