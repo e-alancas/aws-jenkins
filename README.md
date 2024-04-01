@@ -63,7 +63,7 @@ This project serves as a guide to create and setup a Jenkins main instance with 
 
 </div>
 
-### AWS Services used
+### AWS Services Used
 * EC2
 * VPC
 * VPC Peering
@@ -111,6 +111,8 @@ The next packages need to be installed in the controller:
 * Terraform: >=1.7.5 [Download](https://developer.hashicorp.com/terraform/install)
 
 * Ansible: >= 2.16.4 [Download](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
+* A public SSH Key generated for the controller to connect with the Jenkins instances. This Key needs to be placed and named in here: ```src\ssh\id_rsa.pub```.
 
 ### AWS Prerequisites
 The backend for this Terraform project will be hosted in S3, so you will need an S3 bucket for this. This name needs to be updated in the ```backend.tf``` file and update the ```bucket``` value.
