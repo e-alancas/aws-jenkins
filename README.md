@@ -61,7 +61,7 @@ This project serves as a guide to create and setup a Jenkins main instance with 
 ### Architecture Diagram
 
 <div align="center">
-  <a href="https://github.com/e-alancas/jenkins-aws-terraform-ansible">
+  <a href="https://github.com/e-alancas/jenkins-aws-terraform-ansible/blob/main/resources/img/architecture.jpg">
     <img src="resources/img/architecture.jpg" alt="architecture" >
   </a>
 
