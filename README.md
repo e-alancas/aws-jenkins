@@ -75,7 +75,6 @@ This project serves as a guide to create and setup a Jenkins main instance with 
 * Route 53
 * ALB
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -86,8 +85,6 @@ This project serves as a guide to create and setup a Jenkins main instance with 
 * ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 * ![Jenkins Badge](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white)
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -121,7 +118,6 @@ The next packages need to be installed in the controller:
 ### AWS Prerequisites
 The backend for this Terraform project will be hosted in S3, so you will need an S3 bucket for this. This name needs to be updated in the ```backend.tf``` file and update the ```bucket``` value.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Create Infrastructure
 
@@ -139,20 +135,16 @@ The backend for this Terraform project will be hosted in S3, so you will need an
 
 - [ ] Create the Ansible playbook for configuring agents
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
 
 Eliecer Alan Cascante - [LinkedIn](https://www.linkedin.com/in/eliecer-alan-cascante/) - ealancascante@gmail.com
 
-Project Link: [https://github.com/e-alancas/jenkins-aws-terraform-ansible/issues](https://github.com/e-alancas/selenium-functional-testing/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Project Link: [https://github.com/e-alancas/jenkins-aws-terraform-ansible](https://github.com/e-alancas/jenkins-aws-terraform-ansible)
