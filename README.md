@@ -29,19 +29,23 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-and-integrated-with">Built and Integrated With </a></li>
+        <li><a href="#architecture-diagram">Architecture Diagram</a></li>
+        <li><a href="#aws-services-used">AWS Services Used</a></li>
+        <li><a href="#built-and-integrated-with">Built and Integrated with</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#terraform-controller">Terraform Controller</a></li>
+        <li><a href="#terraform-controller-prerequisites">Terraform Controller Prerequisites</a></li>
+        <li><a href="#aws-prerequisites">AWS Prerequisites</a></li>
       </ul>
     </li>
+    <li><a href="#create-infrastructure">Create Infrastructure</a></li>
+    <li><a href="#destroy-infrastructure">Destroy Infrastructure</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -75,7 +79,7 @@ This project serves as a guide to create and setup a Jenkins main instance with 
 
 
 
-### Built and Integrated With
+### Built and Integrated with
 
 * ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 * ![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)
@@ -119,7 +123,7 @@ The backend for this Terraform project will be hosted in S3, so you will need an
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Build resources
+## Create Infrastructure
 
 * Navigate to ```src/```
 * ```$ terraform init```
@@ -127,7 +131,7 @@ The backend for this Terraform project will be hosted in S3, so you will need an
 * ```$ terraform plan```
 * ```$ terraform apply```
 
-## Destroy resources
+## Destroy Infrastructure
 
 * ```$ terraform destroy```
 
